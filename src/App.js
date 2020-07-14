@@ -9,6 +9,8 @@ import Total from './components/Total';
 const App = props => {
   const {car, additionalFeatures, additionalPrice} = props;
 
+  console.log('In App: ', car);
+
   return (
     <div className="boxes">
       <div className="box">
