@@ -5,8 +5,7 @@ import {addFeature} from '../actions/carActions'
 
 const AdditionalFeature = props => {
   return (
-    <li>
-      {/* Add an onClick that will let you add a feature to your car */}
+    <li >
       <button className="button"
         onClick={(e) => {
           e.preventDefault();

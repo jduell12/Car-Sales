@@ -1,4 +1,4 @@
-import {ADD_FEATURE} from '../actions/carActions';
+import {ADD_FEATURE, TOTAL, REMOVE_ADD_FEATURE} from '../actions/carActions';
 
 export const initialState = {
     additionalPrice: 0,
@@ -26,18 +26,13 @@ export const initialState = {
                   ...state,
                   car:{
                       ...state.car,
-                      features: [...state.car.features, action.payload]
-                  }, 
-                  additionalFeatures: [
-                      state.additionalFeatures.filter(item => {
-                          if(item.id === action.payload.id){
-                             return console.log(item);
-                          } else {
-                              return item;
-                          }
-                      })
-                  ]
+                      features: state.car.features.includes(action.payload) ? [...state.car.features] : [...state.car.features, action.payload]
+                  }
               }
+            case REMOVE_ADD_FEATURE:
+                return state;
+            case TOTAL:
+                return state;
           default:
               console.log('In reducer: default')
               return state;

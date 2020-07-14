@@ -7,3 +7,21 @@ export const addFeature = (newFeature) => {
         payload: newFeature
     }
 }
+
+//action that remove added features
+export const REMOVE_ADD_FEATURE = "REMOVE_ADD_FEATURE";
+export const removeAddFeature = (featureId) => {
+    return {
+        type: REMOVE_ADD_FEATURE,
+        payload: featureId
+    }
+}
+
+//action that totals the car price
+export const TOTAL = "TOTAL";
+export const total = (price) => {
+    return {
+        type: TOTAL,
+        payload: price
+    }
+}
