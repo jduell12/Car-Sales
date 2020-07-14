@@ -15,12 +15,3 @@ export const removeAddFeature = (featureId) => {
         payload: featureId
     }
 }
-
-//action that totals the car price
-export const ADD_TOTAL = "ADD_TOTAL";
-export const addTotal = (price) => {
-    return {
-        type: ADD_TOTAL,
-        payload: price
-    }
-}

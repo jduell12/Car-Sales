@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 
-import {addFeature, addTotal} from '../actions/carActions'
+import {addFeature} from '../actions/carActions'
 
 const AdditionalFeature = props => {
   return (
@@ -10,7 +10,6 @@ const AdditionalFeature = props => {
         onClick={(e) => {
           e.preventDefault();
           props.addFeature(props.feature);
-          props.addTotal(props.feature);
         }}
       >
         Add
@@ -21,4 +20,4 @@ const AdditionalFeature = props => {
 };
 
 
-export default connect(null, {addFeature, addTotal})(AdditionalFeature);
+export default connect(null, {addFeature})(AdditionalFeature);
