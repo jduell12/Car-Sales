@@ -18,10 +18,8 @@ export const initialState = {
   };
 
   export const carReducer = (state = initialState, action) => {
-      console.log('In reducer before switch')
       switch(action.type){
           case ADD_FEATURE:
-              console.log('In reducer', action.payload);
               return{
                   ...state,
                   car:{
@@ -34,7 +32,6 @@ export const initialState = {
             case TOTAL:
                 return state;
           default:
-              console.log('In reducer: default')
               return state;
       }
   };
