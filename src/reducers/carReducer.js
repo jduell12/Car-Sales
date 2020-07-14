@@ -30,7 +30,7 @@ export const initialState = {
                   }, 
                   additionalFeatures: [
                       state.additionalFeatures.filter(item => {
-                          if(item.name === action.payload){
+                          if(item.id === action.payload.id){
                              return console.log(item);
                           } else {
                               return item;

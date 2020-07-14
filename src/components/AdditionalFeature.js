@@ -10,7 +10,7 @@ const AdditionalFeature = props => {
       <button className="button"
         onClick={(e) => {
           e.preventDefault();
-          props.addFeature(props.feature.name);
+          props.addFeature(props.feature);
         }}
       >
         Add
