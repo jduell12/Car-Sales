@@ -27,7 +27,16 @@ export const initialState = {
                   car:{
                       ...state.car,
                       features: [...state.car.features, action.payload]
-                  }
+                  }, 
+                  additionalFeatures: [
+                      state.additionalFeatures.filter(item => {
+                          if(item.name === action.payload){
+                             return console.log(item);
+                          } else {
+                              return item;
+                          }
+                      })
+                  ]
               }
           default:
               console.log('In reducer: default')

@@ -1,4 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux'
+
+import {addFeature} from '../actions/carActions'
 
 const AdditionalFeature = props => {
   return (
@@ -7,7 +10,7 @@ const AdditionalFeature = props => {
       <button className="button"
         onClick={(e) => {
           e.preventDefault();
-          props.addNewFeature(props.feature.name);
+          props.addFeature(props.feature.name);
         }}
       >
         Add
@@ -18,4 +21,4 @@ const AdditionalFeature = props => {
 };
 
 
-export default AdditionalFeature;
+export default connect(null, {addFeature})(AdditionalFeature);
