@@ -1,4 +1,4 @@
-import {ADD_FEATURE} from '../actions/carActions'
+import {ADD_FEATURE} from '../actions/carActions';
 
 export const initialState = {
     additionalPrice: 0,
@@ -18,9 +18,10 @@ export const initialState = {
   };
 
   export const carReducer = (state = initialState, action) => {
+      console.log('In reducer before switch')
       switch(action.type){
           case ADD_FEATURE:
-              console.log('In reducer', action.payload)
+              console.log('In reducer', action.payload);
               return{
                   ...state,
                   car:{
@@ -32,4 +33,4 @@ export const initialState = {
               console.log('In reducer: default')
               return state;
       }
-  }
+  };
