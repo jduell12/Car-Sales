@@ -1,7 +1,6 @@
 //action that adds feature to car state 
 export const ADD_FEATURE = "ADD_FEATURE";
 export const addFeature = (newFeature) => {
-    console.log(`in action addFeature: ${newFeature}`)
     return {
         type: ADD_FEATURE,
         payload: newFeature
@@ -18,10 +17,10 @@ export const removeAddFeature = (featureId) => {
 }
 
 //action that totals the car price
-export const TOTAL = "TOTAL";
-export const total = (price) => {
+export const ADD_TOTAL = "ADD_TOTAL";
+export const addTotal = (price) => {
     return {
-        type: TOTAL,
+        type: ADD_TOTAL,
         payload: price
     }
 }

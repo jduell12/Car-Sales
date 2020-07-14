@@ -11,8 +11,8 @@ import Total from './components/Total';
 const App = props => {
   const {car, additionalFeatures, additionalPrice} = props;
 
-  console.log('In App car: ', car);
-  console.log('In app additionalFeatures: ', additionalFeatures);
+  // console.log('In App car: ', car);
+  // console.log('In app additionalFeatures: ', additionalFeatures);
 
   return (
     <div className="boxes">
